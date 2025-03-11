@@ -5,12 +5,12 @@ import org.example.model.enums.PaintColor;
 public class Carpet {
     private int width;
     private int height;
-    private PaintColor paintColor;
+    private PaintColor color;
 
     public Carpet(int width, int height, PaintColor paintColor) {
         this.width = width;
         this.height = height;
-        this.paintColor = paintColor;
+        this.color = paintColor;
     }
 
     public int getWidth() {
@@ -22,7 +22,7 @@ public class Carpet {
     }
 
     public PaintColor getColor() {
-        return paintColor;
+        return color;
     }
 
     public void lying() {

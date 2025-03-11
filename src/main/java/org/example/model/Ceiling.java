@@ -4,11 +4,11 @@ import org.example.model.enums.PaintColor;
 
 public class Ceiling {
     private int height;
-    private PaintColor paintColor;
+    private PaintColor color;
 
     public Ceiling(int height, PaintColor paintColor) {
         this.height = height;
-        this.paintColor = paintColor;
+        this.color = paintColor;
     }
 
     public int getHeight() {
@@ -16,7 +16,7 @@ public class Ceiling {
     }
 
     public PaintColor getColor() {
-        return paintColor;
+        return color;
     }
 
     public void create() {
