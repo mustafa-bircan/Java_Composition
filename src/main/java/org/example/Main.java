@@ -1,9 +1,6 @@
 package org.example;
 
-import org.example.model.Bed;
-import org.example.model.Carpet;
-import org.example.model.Lamp;
-import org.example.model.Wardrobe;
+import org.example.model.*;
 import org.example.model.enums.LampType;
 import org.example.model.enums.PaintColor;
 
@@ -37,5 +34,11 @@ public class Main {
         System.out.println("Width: " + carpet.getWidth());
         System.out.println("Height: " + carpet.getHeight());
         System.out.println("Color: " + carpet.getPaintColor());
+
+        Ceiling ceiling = new Ceiling(300, PaintColor.WHITE);
+
+        ceiling.create();
+        System.out.println("Height: " + ceiling.getHeight());
+        System.out.println("Color: " + ceiling.getPaintColor());
     }
 }
