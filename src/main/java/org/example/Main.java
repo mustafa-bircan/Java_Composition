@@ -40,5 +40,10 @@ public class Main {
         ceiling.create();
         System.out.println("Height: " + ceiling.getHeight());
         System.out.println("Color: " + ceiling.getPaintColor());
+
+        Wall wall = new Wall("North");
+
+        wall.create();
+        System.out.println("Direction: " + wall.getDirection());
     }
 }
