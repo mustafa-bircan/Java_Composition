@@ -21,7 +21,7 @@ public class Carpet {
         return height;
     }
 
-    public PaintColor getPaintColor() {
+    public PaintColor getColor() {
         return paintColor;
     }
 
