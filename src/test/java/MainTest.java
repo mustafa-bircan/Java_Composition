@@ -138,7 +138,7 @@ public class MainTest {
     @DisplayName("Carpet sınıf değişkenleri doğru access modifier değerlerine sahip mi ?")
     @Test
     public void testCarpetAccessModifiers() throws NoSuchFieldException {
-        Field colorField = carpet.getClass().getDeclaredField("color");
+        Field colorField = carpet.getClass().getDeclaredField("paintColor");
         Field widthField = carpet.getClass().getDeclaredField("width");
         Field heightField = carpet.getClass().getDeclaredField("height");
 
@@ -169,7 +169,7 @@ public class MainTest {
     @DisplayName("Ceiling sınıf değişkenleri doğru access modifier değerlerine sahip mi ?")
     @Test
     public void testCeilingAccessModifiers() throws NoSuchFieldException {
-        Field colorField = ceiling.getClass().getDeclaredField("color");
+        Field colorField = ceiling.getClass().getDeclaredField("paintColor");
         Field heightField = ceiling.getClass().getDeclaredField("height");
 
         assertEquals(colorField.getModifiers(), 2);
