@@ -2,6 +2,7 @@ package org.example;
 
 import org.example.model.Bed;
 import org.example.model.Lamp;
+import org.example.model.Wardrobe;
 import org.example.model.enums.LampType;
 
 public class Main {
@@ -20,5 +21,12 @@ public class Main {
         System.out.println("Height: " + bed.getHeight());
         System.out.println("Sheets: " + bed.getSheets());
         System.out.println("Quilt: " + bed.getQuilt());
+
+        Wardrobe wardrobe = new Wardrobe(120, 200, 75.5);
+
+        wardrobe.add();
+        System.out.println("Width: " + wardrobe.getWidth());
+        System.out.println("Height: " + wardrobe.getHeight());
+        System.out.println("Weight: " + wardrobe.getWeight());
     }
 }
