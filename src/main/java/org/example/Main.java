@@ -1,49 +1,33 @@
-package org.example;
-
 import org.example.model.*;
 import org.example.model.enums.LampType;
 import org.example.model.enums.PaintColor;
 
 public class Main {
     public static void main(String[] args) {
-        Lamp lamp = new Lamp(LampType.NEON, true, 75);
-
-        lamp.turnOn();
-        System.out.println("Style: " + lamp.getStyle());
-        System.out.println("Battery: " + lamp.isBattery());
-        System.out.println("Glob Rating: " + lamp.getGlobRating());
-
+        Wall wall1 = new Wall("North");
+        Wall wall2 = new Wall("South");
+        Wall wall3 = new Wall("East");
+        Wall wall4 = new Wall("West");
+        Ceiling ceiling = new Ceiling(300, PaintColor.WHITE);
         Bed bed = new Bed("Modern", 4, 50, 2, 1);
-
-        bed.make();
-        System.out.println("Pillows: " + bed.getPillows());
-        System.out.println("Height: " + bed.getHeight());
-        System.out.println("Sheets: " + bed.getSheets());
-        System.out.println("Quilt: " + bed.getQuilt());
-
+        Lamp lamp = new Lamp(LampType.NEON, true, 75);
         Wardrobe wardrobe = new Wardrobe(120, 200, 75.5);
-
-        wardrobe.add();
-        System.out.println("Width: " + wardrobe.getWidth());
-        System.out.println("Height: " + wardrobe.getHeight());
-        System.out.println("Weight: " + wardrobe.getWeight());
-
         Carpet carpet = new Carpet(200, 300, PaintColor.RED);
 
-        carpet.lying();
-        System.out.println("Width: " + carpet.getWidth());
-        System.out.println("Height: " + carpet.getHeight());
-        System.out.println("Color: " + carpet.getPaintColor());
+        Bedroom bedroom = new Bedroom("Master Bedroom", wall1, wall2, wall3, wall4, ceiling, carpet, bed, lamp, wardrobe);
 
-        Ceiling ceiling = new Ceiling(300, PaintColor.WHITE);
+        System.out.println("Bedroom Name: " + bedroom.getName());
+        System.out.println("Wall1 Direction: " + bedroom.getWall1().getDirection());
+        System.out.println("Ceiling Height: " + bedroom.getCeiling().getHeight());
+        System.out.println("Bed Style: " + bedroom.getBed().getStyle());
+        System.out.println("Lamp Type: " + bedroom.getLamp().getStyle());
+        System.out.println("Wardrobe Weight: " + bedroom.getWardrobe().getWeight());
+        System.out.println("Carpet Color: " + bedroom.getCarpet().getColor());
 
-        ceiling.create();
-        System.out.println("Height: " + ceiling.getHeight());
-        System.out.println("Color: " + ceiling.getPaintColor());
-
-        Wall wall = new Wall("North");
-
-        wall.create();
-        System.out.println("Direction: " + wall.getDirection());
+        bedroom.getBed().make();
+        bedroom.getWardrobe().add();
+        bedroom.getCarpet().lying();
+        bedroom.getCeiling().create();
+        bedroom.getWall1().create();
     }
 }
