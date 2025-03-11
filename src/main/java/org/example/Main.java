@@ -1,9 +1,11 @@
 package org.example;
 
 import org.example.model.Bed;
+import org.example.model.Carpet;
 import org.example.model.Lamp;
 import org.example.model.Wardrobe;
 import org.example.model.enums.LampType;
+import org.example.model.enums.PaintColor;
 
 public class Main {
     public static void main(String[] args) {
@@ -28,5 +30,12 @@ public class Main {
         System.out.println("Width: " + wardrobe.getWidth());
         System.out.println("Height: " + wardrobe.getHeight());
         System.out.println("Weight: " + wardrobe.getWeight());
+
+        Carpet carpet = new Carpet(200, 300, PaintColor.RED);
+
+        carpet.lying();
+        System.out.println("Width: " + carpet.getWidth());
+        System.out.println("Height: " + carpet.getHeight());
+        System.out.println("Color: " + carpet.getPaintColor());
     }
 }
